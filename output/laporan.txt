@@ -1,0 +1,26 @@
+==================================================================
+ LAPORAN OPERASIONAL LAYANAN & BACKUP - PROYEK 6A SISTEM OPERASI
+ Waktu Pembuatan : 2026-11-15 15:31:25
+==================================================================
+
+[1] STATUS PROSES LAYANAN UTAMA
+ - Layanan : smbd | Status : active | MainPID : 1426
+ - Layanan : ssh | Status : active | MainPID : 8005
+
+[2] RINGKASAN PENGGUNAAN SUMBER DAYA (CPU & MEMORI HOST)
+                  total        used        free      shared  buff/cache   available
+   Memori (MB) -> Total: 3398 | Digunakan: 2742 | Bebas: 177
+       PID COMMAND         %CPU %MEM
+      5737 Isolated Web Co 12.6 30.2
+      4223 firefox         10.2 13.0
+     26847 bash             9.5  0.1
+      3019 gnome-shell      4.5 11.1
+      1222 containerd       2.1  0.6
+
+[3] DAFTAR ARSIP BACKUP & CHECKSUM TERBARU
+   total 0
+   -rw-r--r-- 1 root root 0 Nov 15 15:27 latest_backup.tar.gz
+
+[4] 15 LOG OPERASIONAL & AUDIT AKSES TERAKHIR
+   [2026-11-15 15:27:54] [SIMULASI] Sistem Proyek 6A siap diuji.
+==================================================================
