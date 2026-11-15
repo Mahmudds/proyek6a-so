@@ -1,0 +1,23 @@
+=== BUKTI PENGUJIAN ANGGOTA 6 (MONITORING, LAPORAN, & DOCKER) ===
+[2026-11-15 15:32:27] [ANGGOTA-6] PENGAMATAN 2 BEBAN AMAN: Membandingkan Beban Ringan (1MB) vs Beban Menengah (25MB)
+--- Pengujian Beban 1MB ---
+tar: Removing leading `/' from member names
+Beban 1MB -> Waktu: 0:00.01 | CPU: 69% | Max RAM: 3340 KB
+--- Pengujian Beban 25MB ---
+tar: Removing leading `/' from member names
+Beban 25MB -> Waktu: 0:00.04 | CPU: 97% | Max RAM: 3332 KB
+[2026-11-15 15:32:27] [ANGGOTA-6] PENGAMATAN BEBAN SELESAI: Metrik 2 beban aman berhasil dicatat.
+
+--- Checksum SHA256 output/laporan.txt ---
+bab81971930e8a35be7ebe67ad1bb3cf3eea36f615993771d400c2116380687d  /home/jixksee/proyek6a-so/output/laporan.txt
+
+--- Log Operasional Anggota 6 ---
+[2026-11-15 15:31:26] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-15 15:31:44] [ANGGOTA-6] PENGAMATAN 2 BEBAN AMAN: Membandingkan Beban Ringan (1MB) vs Beban Menengah (25MB)
+[2026-11-15 15:31:44] [ANGGOTA-6] PENGAMATAN BEBAN SELESAI: Metrik 2 beban aman berhasil dicatat.
+[2026-11-15 15:32:00] [ANGGOTA-6] UJI POSITIF DOCKER: Container alpine:3.19 membaca /data/laporan.txt (read-only mount)
+[2026-11-15 15:32:01] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host dengan exit status 0.
+[2026-11-15 15:32:11] [ANGGOTA-6] UJI NEGATIF DOCKER: Percobaan menulis ke /data/laporan.txt pada mount read-only
+[2026-11-15 15:32:11] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak (exit status 1) & checksum berkas host tetap identik.
+[2026-11-15 15:32:27] [ANGGOTA-6] PENGAMATAN 2 BEBAN AMAN: Membandingkan Beban Ringan (1MB) vs Beban Menengah (25MB)
+[2026-11-15 15:32:27] [ANGGOTA-6] PENGAMATAN BEBAN SELESAI: Metrik 2 beban aman berhasil dicatat.
