@@ -1,0 +1,9 @@
+[2026-11-15 11:22:31] [ANGGOTA-2] Konfigurasi [proyek6a_share] sudah ada di /etc/samba/smb.conf.
+[2026-11-15 11:22:31] [ANGGOTA-2] Akun Samba 'user_op' berhasil diaktifkan.
+[2026-11-15 11:22:31] [ANGGOTA-2] Akun Samba 'user_ro' berhasil diaktifkan.
+[2026-11-15 11:22:32] [ANGGOTA-2] SETUP SAMBA BERHASIL: Layanan smbd aktif dan siap menerima koneksi.
+[2026-11-15 11:22:38] [ANGGOTA-2] UJI POSITIF: Mengakses share //127.0.0.1/proyek6a_share dengan akun berwenang (user_op)
+[2026-11-15 11:22:38] [ANGGOTA-2] HASIL POSITIF LULUS: user_op berhasil mengakses share Samba (exit 0).
+[2026-11-15 11:22:54] [ANGGOTA-2] UJI NEGATIF: Mengakses share //127.0.0.1/proyek6a_share dengan akun tidak berwenang (user_luar)
+[2026-11-15 11:22:54] [ANGGOTA-2] HASIL NEGATIF LULUS: Akses Samba oleh user_luar ditolak (NT_STATUS_ACCESS_DENIED).
+[2026-11-15 11:23:55] [ANGGOTA-2] RESET: Layanan Samba di-restart kembali ke kondisi normal.
