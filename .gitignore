@@ -1,0 +1,8 @@
+*.swp
+*~
+.DS_Store
+*.tar.gz
+*.viso
+*.vdi
+id_rsa*
+id_ed25519*

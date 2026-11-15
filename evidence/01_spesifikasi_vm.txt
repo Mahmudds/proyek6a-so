@@ -1,0 +1,23 @@
+=== OS & KERNEL ===
+Distributor ID:	Ubuntu
+Description:	Ubuntu 26.04.1 LTS
+Release:	26.04
+Codename:	resolute
+7.0.0-43-generic
+
+=== CPU ===
+CPU(s):                                  2
+Model name:                              AMD Ryzen 3 5300U with Radeon Graphics
+Thread(s) per core:                      1
+Socket(s):                               1
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+
+=== RAM ===
+               total        used        free      shared  buff/cache   available
+Mem:           3.3Gi       571Mi       1.6Gi       4.2Mi       1.4Gi       2.7Gi
+Swap:             0B          0B          0B
+
+=== STORAGE ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        24G  4.0G   19G  18% /
