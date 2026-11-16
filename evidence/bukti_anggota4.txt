@@ -1,0 +1,55 @@
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Mon 2026-11-16 12:18:27 UTC; 1h 13min ago
+ Invocation: c767269eb1e24646a880ebc6e930c2b2
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 3794 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 3797 (sshd)
+      Tasks: 1 (limit: 1700)
+     Memory: 3.3M (peak: 5.2M)
+        CPU: 751ms
+     CGroup: /system.slice/ssh.service
+             └─3797 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Nov 16 12:42:28 mumubuntu sshd-session[4593]: pam_unix(sshd:session): session opened for user user_ro(uid=1003) by user_ro(uid=0)
+Nov 16 13:22:43 mumubuntu sshd-session[5270]: Accepted publickey for user_ro from 127.0.0.1 port 52460 ssh2: ED25519 SHA256:q+CsgBB7MUAk2Dw2pmnUsa25aCDxejISzRx85bzfM0s
+Nov 16 13:22:43 mumubuntu sshd-session[5270]: pam_unix(sshd:session): session opened for user user_ro(uid=1003) by user_ro(uid=0)
+Nov 16 13:23:45 mumubuntu sshd-session[5419]: Accepted publickey for admin_os from 127.0.0.1 port 39998 ssh2: ED25519 SHA256:cppQ7syeRvVU2JnxcyuMmOAXWnm6rrFaBCFeZafP+JM
+Nov 16 13:23:45 mumubuntu sshd-session[5419]: pam_unix(sshd:session): session opened for user admin_os(uid=1001) by admin_os(uid=0)
+Nov 16 13:23:47 mumubuntu sshd-session[5508]: Accepted publickey for admin_os from 127.0.0.1 port 40014 ssh2: ED25519 SHA256:cppQ7syeRvVU2JnxcyuMmOAXWnm6rrFaBCFeZafP+JM
+Nov 16 13:23:47 mumubuntu sshd-session[5508]: pam_unix(sshd:session): session opened for user admin_os(uid=1001) by admin_os(uid=0)
+Nov 16 13:23:47 mumubuntu sshd-session[5508]: pam_unix(sshd:session): session closed for user admin_os
+Nov 16 13:31:35 mumubuntu sshd-session[5765]: Accepted publickey for admin_os from 127.0.0.1 port 59970 ssh2: ED25519 SHA256:cppQ7syeRvVU2JnxcyuMmOAXWnm6rrFaBCFeZafP+JM
+Nov 16 13:31:35 mumubuntu sshd-session[5765]: pam_unix(sshd:session): session opened for user admin_os(uid=1001) by admin_os(uid=0)
+● smbd.service - Samba SMB Daemon
+     Loaded: loaded (/usr/lib/systemd/system/smbd.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-11-16 13:27:49 UTC; 3min 48s ago
+ Invocation: d687d9172fb4496ba61d0259d4f68a92
+       Docs: man:smbd(8)
+             man:samba(7)
+             man:smb.conf(5)
+    Process: 5702 ExecCondition=/usr/share/samba/is-configured smb (code=exited, status=0/SUCCESS)
+    Process: 5705 ExecStartPre=/usr/share/samba/update-apparmor-samba-profile (code=exited, status=0/SUCCESS)
+   Main PID: 5709 (smbd)
+     Status: "smbd: ready to serve connections..."
+      Tasks: 3 (limit: 1700)
+     Memory: 7.7M (peak: 7.9M)
+        CPU: 298ms
+     CGroup: /system.slice/smbd.service
+             ├─5709 /usr/sbin/smbd --foreground --no-process-group
+             ├─5713 "smbd: notifyd" .
+             └─5714 "smbd: cleanupd "
+
+Nov 16 13:27:49 mumubuntu systemd[1]: Starting smbd.service - Samba SMB Daemon...
+Nov 16 13:27:49 mumubuntu systemd[1]: Started smbd.service - Samba SMB Daemon.
+LULUS: admin_os berhasil mengecek SSH dan Samaba lewat SSH.
+Exit test_pos: 0
+user_ro
+sudo: I'm sorry user_ro. I'm afraid I can't do that
+LULUS: user_ro berhasil login, lalu sudo menolak restart Samba.
+Exit test_neg: 13
+Setelah stop: inactive
+Setelah start: active
+Exit simulasi_mati: 0
