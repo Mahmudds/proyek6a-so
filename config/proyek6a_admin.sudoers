@@ -1,0 +1,2 @@
+admin_os ALL=(root) NOPASSWD: /usr/bin/systemctl status ssh --no-pager
+admin_os ALL=(root) NOPASSWD: /usr/bin/systemctl status smbd --no-pager
