@@ -1,0 +1,39 @@
+BUKTI PENGUJIAN ANGGOTA 5
+Tanggal: Tue Nov 17 01:20:26 AM WIB 2026
+====================================
+[2026-11-17 01:20:33] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261117_012033.tar.gz
+[2026-11-17 01:20:33] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
+latest_backup.tar.gz: OK
+[2026-11-17 01:20:59] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
+corrupt_backup.tar.gz: FAILED
+sha256sum: WARNING: 1 computed checksum did NOT match
+[2026-11-17 01:21:19] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+Exit status negatif: 14
+corrupt_backup.tar.gz: FAILED
+sha256sum: WARNING: 1 computed checksum did NOT match
+[2026-11-17 01:21:46] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+Exit status negatif: 14
+[2026-11-17 01:21:59] [ANGGOTA-5] Reset berhasil: file pengujian dibersihkan.
+====================================
+DAFTAR FILE BACKUP:
+LOG ANGGOTA 5:
+[2026-11-15 18:09:24] [ANGGOTA-5] UJI POSITIF: Verifikasi checksum dan restore dari latest_backup.tar.gz
+[2026-11-15 18:09:24] [ANGGOTA-5] HASIL POSITIF LULUS: Integritas cocok dan seluruh berkas dipulihkan sesuai isi asli (exit 0).
+[2026-11-15 18:09:44] [ANGGOTA-5] UJI NEGATIF: Mencoba restore dari arsip yang telah rusak (/srv/proyek6a/backup/corrupt_backup.tar.gz)
+[2026-11-15 18:09:44] [ANGGOTA-5] HASIL NEGATIF LULUS: Kerusakan arsip terdeteksi (Checksum mismatch). Proses restore DIBATALKAN demi menjaga integritas data.
+[2026-11-15 18:11:03] [ANGGOTA-5] UJI NEGATIF: Mencoba restore dari arsip yang telah rusak (/srv/proyek6a/backup/corrupt_backup.tar.gz)
+[2026-11-15 18:11:03] [ANGGOTA-5] HASIL NEGATIF LULUS: Kerusakan arsip terdeteksi (Checksum mismatch). Proses restore DIBATALKAN demi menjaga integritas data.
+[2026-11-15 20:53:07] [ANGGOTA-5] BACKUP BERHASIL: Arsip backup_shared_20261115_205307.tar.gz dan checksum SHA256 dibuat.
+[2026-11-15 20:53:22] [ANGGOTA-5] UJI POSITIF: Verifikasi checksum dan restore dari latest_backup.tar.gz
+[2026-11-15 20:53:22] [ANGGOTA-5] HASIL POSITIF LULUS: Integritas cocok dan seluruh berkas dipulihkan sesuai isi asli (exit 0).
+[2026-11-15 20:53:34] [ANGGOTA-5] UJI NEGATIF: Mencoba restore dari arsip yang telah rusak (/srv/proyek6a/backup/corrupt_backup.tar.gz)
+[2026-11-15 20:53:34] [ANGGOTA-5] HASIL NEGATIF LULUS: Kerusakan arsip terdeteksi (Checksum mismatch). Proses restore DIBATALKAN demi menjaga integritas data.
+[2026-11-15 20:54:31] [ANGGOTA-5] BACKUP BERHASIL: Arsip backup_shared_20261115_205431.tar.gz dan checksum SHA256 dibuat.
+[2026-11-15 20:54:40] [ANGGOTA-5] UJI POSITIF: Verifikasi checksum dan restore dari latest_backup.tar.gz
+[2026-11-15 20:54:40] [ANGGOTA-5] HASIL POSITIF LULUS: Integritas cocok dan seluruh berkas dipulihkan sesuai isi asli (exit 0).
+[2026-11-17 01:20:33] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261117_012033.tar.gz
+[2026-11-17 01:20:33] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
+[2026-11-17 01:20:59] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
+[2026-11-17 01:21:19] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+[2026-11-17 01:21:46] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+[2026-11-17 01:21:59] [ANGGOTA-5] Reset berhasil: file pengujian dibersihkan.
