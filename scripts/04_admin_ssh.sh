@@ -7,6 +7,20 @@ ssh_lokal() {
 }
 
 case "$1" in
+setup)
+		echo "admin_os ALL=(ALL) NOPASSWD: /bin/systemctl status smbd, /bin/systemctl status ssh, /bin/systemctl restart smbd, /bin/systemctl stop smbd, /bin/systemctl start smbd" | sudo tee /etc/sudoers.d/proyek6a_admin >/dev/null
+		sudo chmod 440 /etc/sudoers.d/proyek6a_admin
+		for u in admin_os user_ro; do
+			sudo -u "$u" mkdir -p /home/$u/.ssh
+			sudo -u "$u" ssh-keygen -t ed25519 -N "" -f /home/$u/.ssh/id_ed25519 <<< y >/dev/null 2>&1
+			sudo -u "$u" cp /home/$u/.ssh/id_ed25519.pub /home/$u/.ssh/authorized_keys
+			ssh-keyscan -H 127.0.0.1 | sudo -u "$u" tee /home/$u/.ssh/known_hosts >/dev/null 2>&1
+			sudo chmod 700 /home/$u/.ssh
+			sudo chmod 600 /home/$u/.ssh/authorized_keys
+			sudo chmod 644 /home/$u/.ssh/known_hosts
+		done
+		echo "SETUP SSH: Sudoers dan SSH Key berhasil dibuat."
+		;;
 	test_pos)
 		for layanan in ssh smbd; do
 			ssh_lokal admin_os \
