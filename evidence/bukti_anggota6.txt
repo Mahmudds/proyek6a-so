@@ -1,0 +1,9 @@
+=== BUKTI PENGUJIAN ANGGOTA 6 (MONITORING, LAPORAN, & DOCKER) ===
+tar: Removing leading `/' from member names
+Beban 1MB -> Waktu: 0:00.01 | CPU: 90% | Max RAM: 3380 KB
+tar: Removing leading `/' from member names
+Beban 25MB -> Waktu: 0:00.08 | CPU: 100% | Max RAM: 3420 KB
+df9e9dd3998b6d00bf806091c4d1a6a68fd94f43133bdcd17fdca8808f6233f3  /home/jixksee/proyek6a-so/output/laporan.txt
+[2026-11-17 14:05:27] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-17 14:05:43] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+[2026-11-17 14:05:50] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
