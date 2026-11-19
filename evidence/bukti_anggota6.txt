@@ -1,9 +1,103 @@
-=== BUKTI PENGUJIAN ANGGOTA 6 (MONITORING, LAPORAN, & DOCKER) ===
+==================================================================
+ BUKTI PENGUJIAN LENGKAP ANGGOTA 6 (MONITORING, BEBAN, & DOCKER)
+ Waktu Eksekusi : 2026-11-19 03:22:12
+ Host / User    : Ubuntuserver / jixksee
+==================================================================
+
+[1] VERIFIKASI LAYANAN & IMAGE DOCKER
+Status Docker : active
+Status Samba  : active
+Status SSH    : active
+Versi Docker  : Docker version 29.1.3, build 29.1.3-0ubuntu4.1
+Daftar Image Lokal:
+alpine:3.19   6baf43584bcb       11.6MB         3.51MB        
+
+[2] GENERATE LAPORAN OPERASIONAL & CHECKSUM AWAL
+[2026-11-19 03:22:20] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+Exit Code generate_report: 0
+SHA-256 Awal:
+06c486256d36411d378b03843e5d53395c68939ebdb410b2ed831469bcd6a731  output/laporan.txt
+
+--- ISI LENGKAP output/laporan.txt ---
+==================================================================
+ LAPORAN OPERASIONAL LAYANAN & BACKUP - PROYEK 6A SISTEM OPERASI
+ Waktu Pembuatan : 2026-11-19 03:22:18
+==================================================================
+[1] STATUS PROSES LAYANAN UTAMA
+ - Layanan : smbd | Status : active | MainPID : 1126
+ - Layanan : ssh | Status : active | MainPID : 1701
+[2] RINGKASAN PENGGUNAAN SUMBER DAYA (CPU & MEMORI HOST)
+                  total        used        free      shared  buff/cache   available
+   Memori (MB) -> Total: 3398 | Digunakan: 598 | Bebas: 2386
+       PID COMMAND         %CPU %MEM
+      1900 apport          50.8  3.0
+      2011 ps              39.1  0.1
+      2012 head            36.3  0.2
+      1930 snapd           21.5  1.0
+      1914 apport          14.5  1.0
+[3] DAFTAR ARSIP BACKUP & CHECKSUM TERBARU
+   total 32K
+   -rw-r--r-- 1 admin_os operator 246 Nov 17 13:52 backup_shared_20261117_135200.tar.gz
+   -rw-r--r-- 1 admin_os operator 103 Nov 17 13:52 backup_shared_20261117_135200.tar.gz.sha256
+   -rw-r--r-- 1 root     operator 290 Nov 18 10:17 backup_shared_20261118_101736.tar.gz
+   -rw-r--r-- 1 root     operator 103 Nov 18 10:17 backup_shared_20261118_101736.tar.gz.sha256
+   -rw-r--r-- 1 root     operator 301 Nov 18 10:17 corrupt_backup.tar.gz
+   -rw-r--r-- 1 root     operator  88 Nov 18 10:17 corrupt_backup.tar.gz.sha256
+   -rw-r--r-- 1 admin_os operator 290 Nov 18 10:17 latest_backup.tar.gz
+   -rw-r--r-- 1 admin_os operator  87 Nov 18 10:17 latest_backup.tar.gz.sha256
+[4] 15 LOG OPERASIONAL & AUDIT AKSES TERAKHIR
+   [2026-11-17 13:52:22] [ANGGOTA-5] Reset berhasil: file pengujian dibersihkan.
+   [2026-11-17 14:05:27] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-17 14:05:43] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-17 14:05:50] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+   [2026-11-18 10:17:36] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261118_101736.tar.gz
+   [2026-11-18 10:17:36] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
+   [2026-11-18 10:17:41] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
+   [2026-11-18 10:17:47] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+   [2026-11-18 10:18:15] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 12:58:41] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 12:59:09] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-18 12:59:29] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+   [2026-11-18 23:57:33] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 23:58:57] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-18 23:59:10] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+==================================================================
+
+[3] PENGUJIAN BEBAN SERVER (STRESS TEST 1MB & 25MB)
 tar: Removing leading `/' from member names
-Beban 1MB -> Waktu: 0:00.01 | CPU: 93% | Max RAM: 3356 KB
+Beban 1MB -> Waktu: 0:00.26 | CPU: 64% | Max RAM: 3460 KB
 tar: Removing leading `/' from member names
-Beban 25MB -> Waktu: 0:00.05 | CPU: 98% | Max RAM: 3380 KB
-df9e9dd3998b6d00bf806091c4d1a6a68fd94f43133bdcd17fdca8808f6233f3  /home/jixksee/proyek6a-so/output/laporan.txt
-[2026-11-17 14:05:27] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
-[2026-11-17 14:05:43] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+Beban 25MB -> Waktu: 0:00.65 | CPU: 97% | Max RAM: 3372 KB
+Exit Code uji_beban: 0
+
+[4] PENGUJIAN POSITIF DOCKER (READ-ONLY ACCESS)
+   [2026-11-18 23:57:33] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 23:58:57] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-18 23:59:10] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+==================================================================
+[2026-11-19 03:22:36] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+Exit Code test_pos: 0
+
+[5] PENGUJIAN NEGATIF DOCKER (BLOKIR PENULISAN)
+[2026-11-19 03:22:42] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+Exit Code test_neg: 0
+SHA-256 Setelah Uji Negatif (Harus Identik dengan Awal):
+06c486256d36411d378b03843e5d53395c68939ebdb410b2ed831469bcd6a731  output/laporan.txt
+
+[6] AUDIT LOG OPERASIONAL TERBARU (15 BARIS TERAKHIR)
 [2026-11-17 14:05:50] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+[2026-11-18 10:17:36] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261118_101736.tar.gz
+[2026-11-18 10:17:36] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
+[2026-11-18 10:17:41] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
+[2026-11-18 10:17:47] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+[2026-11-18 10:18:15] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-18 12:58:41] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-18 12:59:09] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+[2026-11-18 12:59:29] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+[2026-11-18 23:57:33] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-18 23:58:57] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+[2026-11-18 23:59:10] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+[2026-11-19 03:22:20] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+[2026-11-19 03:22:36] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+[2026-11-19 03:22:42] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+==================================================================
