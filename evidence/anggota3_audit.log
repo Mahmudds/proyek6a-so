@@ -5,3 +5,10 @@
 [2026-11-15 13:12:12] [ANGGOTA-3] AUDIT AKSES: Percobaan penghapusan oleh user_ro ditolak (Permission denied).
 [2026-11-15 13:12:12] [ANGGOTA-3] HASIL NEGATIF LULUS: Seluruh percobaan tulis/hapus oleh user_ro berhasil ditolak.
 [2026-11-15 13:12:13] [ANGGOTA-3] RESET: Verifikasi keutuhan berkas /srv/proyek6a/shared/dokumen_unit_1.txt selesai.
+[2026-11-17 13:28:21] [ANGGOTA-3] UJI POSITIF: user_ro membaca berkas /srv/proyek6a/shared/dokumen_unit_1.txt
+[2026-11-17 13:28:21] [ANGGOTA-3] HASIL POSITIF LULUS: user_ro berhasil membaca berkas (exit 0).
+[2026-11-17 13:28:28] [ANGGOTA-3] UJI NEGATIF: user_ro mencoba memodifikasi dan menghapus /srv/proyek6a/shared/dokumen_unit_1.txt
+[2026-11-17 13:28:28] [ANGGOTA-3] AUDIT AKSES: Percobaan modifikasi oleh user_ro ditolak (Permission denied).
+[2026-11-17 13:28:28] [ANGGOTA-3] AUDIT AKSES: Percobaan penghapusan oleh user_ro ditolak (Permission denied).
+[2026-11-17 13:28:28] [ANGGOTA-3] HASIL NEGATIF LULUS: Seluruh percobaan tulis/hapus oleh user_ro berhasil ditolak.
+[2026-11-17 13:28:36] [ANGGOTA-3] RESET: Verifikasi keutuhan berkas /srv/proyek6a/shared/dokumen_unit_1.txt selesai.

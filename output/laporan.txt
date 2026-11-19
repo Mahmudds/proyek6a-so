@@ -1,29 +1,43 @@
 ==================================================================
  LAPORAN OPERASIONAL LAYANAN & BACKUP - PROYEK 6A SISTEM OPERASI
- Waktu Pembuatan : 2026-11-17 14:05:27
+ Waktu Pembuatan : 2026-11-19 03:22:18
 ==================================================================
 [1] STATUS PROSES LAYANAN UTAMA
- - Layanan : smbd | Status : active | MainPID : 6707
- - Layanan : ssh | Status : active | MainPID : 3339
+ - Layanan : smbd | Status : active | MainPID : 1126
+ - Layanan : ssh | Status : active | MainPID : 1701
 [2] RINGKASAN PENGGUNAAN SUMBER DAYA (CPU & MEMORI HOST)
                   total        used        free      shared  buff/cache   available
-   Memori (MB) -> Total: 3398 | Digunakan: 581 | Bebas: 1838
+   Memori (MB) -> Total: 3398 | Digunakan: 598 | Bebas: 2386
        PID COMMAND         %CPU %MEM
-      4812 dockerd          1.1  2.6
-      4570 containerd       0.8  1.6
-      5787 kworker/0:0-eve  0.6  0.0
-       951 snapd            0.5  1.2
-         1 systemd          0.0  0.4
+      1900 apport          50.8  3.0
+      2011 ps              39.1  0.1
+      2012 head            36.3  0.2
+      1930 snapd           21.5  1.0
+      1914 apport          14.5  1.0
 [3] DAFTAR ARSIP BACKUP & CHECKSUM TERBARU
-   total 16K
-   -rw-r--r-- 1 root operator 246 Nov 17 13:52 backup_shared_20261117_135200.tar.gz
-   -rw-r--r-- 1 root operator 103 Nov 17 13:52 backup_shared_20261117_135200.tar.gz.sha256
-   -rw-r--r-- 1 root operator 246 Nov 17 13:52 latest_backup.tar.gz
-   -rw-r--r-- 1 root operator  87 Nov 17 13:52 latest_backup.tar.gz.sha256
+   total 32K
+   -rw-r--r-- 1 admin_os operator 246 Nov 17 13:52 backup_shared_20261117_135200.tar.gz
+   -rw-r--r-- 1 admin_os operator 103 Nov 17 13:52 backup_shared_20261117_135200.tar.gz.sha256
+   -rw-r--r-- 1 root     operator 290 Nov 18 10:17 backup_shared_20261118_101736.tar.gz
+   -rw-r--r-- 1 root     operator 103 Nov 18 10:17 backup_shared_20261118_101736.tar.gz.sha256
+   -rw-r--r-- 1 root     operator 301 Nov 18 10:17 corrupt_backup.tar.gz
+   -rw-r--r-- 1 root     operator  88 Nov 18 10:17 corrupt_backup.tar.gz.sha256
+   -rw-r--r-- 1 admin_os operator 290 Nov 18 10:17 latest_backup.tar.gz
+   -rw-r--r-- 1 admin_os operator  87 Nov 18 10:17 latest_backup.tar.gz.sha256
 [4] 15 LOG OPERASIONAL & AUDIT AKSES TERAKHIR
-   [2026-11-17 13:52:00] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261117_135200.tar.gz
-   [2026-11-17 13:52:00] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
-   [2026-11-17 13:52:07] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
-   [2026-11-17 13:52:14] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
    [2026-11-17 13:52:22] [ANGGOTA-5] Reset berhasil: file pengujian dibersihkan.
+   [2026-11-17 14:05:27] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-17 14:05:43] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-17 14:05:50] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+   [2026-11-18 10:17:36] [ANGGOTA-5] Backup berhasil: /srv/proyek6a/backup/backup_shared_20261118_101736.tar.gz
+   [2026-11-18 10:17:36] [ANGGOTA-5] Checksum SHA-256 berhasil dibuat.
+   [2026-11-18 10:17:41] [ANGGOTA-5] Pengujian positif berhasil: hasil restore sesuai sumber.
+   [2026-11-18 10:17:47] [ANGGOTA-5] Pengujian negatif berhasil: checksum berbeda, restore ditolak.
+   [2026-11-18 10:18:15] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 12:58:41] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 12:59:09] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-18 12:59:29] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
+   [2026-11-18 23:57:33] [ANGGOTA-6] LAPORAN DIBUAT: Berkas /home/jixksee/proyek6a-so/output/laporan.txt berhasil diperbarui.
+   [2026-11-18 23:58:57] [ANGGOTA-6] HASIL POSITIF LULUS: Container berhasil membaca laporan host.
+   [2026-11-18 23:59:10] [ANGGOTA-6] HASIL NEGATIF LULUS: Penulisan ditolak.
 ==================================================================
